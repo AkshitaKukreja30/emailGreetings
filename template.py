@@ -7,7 +7,13 @@ html = """\
 		font-family: cursive;
 	}</style>
 </head>
-<body style="background:url('cid:image1');">
+<body style=
+"background:url('cid:image1');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+">
 <p style="font-style: italic;">Hey [NAME],</p>
 <p>Wish you a very [GREETING]</p>
 <p>[CUSTOMISED_TEXT]</p>

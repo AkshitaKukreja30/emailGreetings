@@ -10,7 +10,7 @@ from template import html
 msg = MIMEMultipart("related")
 msg['Subject'] = 'Test'
 msg['From'] = 'akshita.kukreja@cygrp.com'
-msg['To'] = 'kukrejaakshita@gmail.com'
+msg['To'] = 'akshita.kukreja@cygrp.com'
 # msg.add_header('Content-Type','text/html')
 
 html = html.replace("[NAME]","XYZ")
@@ -22,7 +22,7 @@ print(html)
 # Record the MIME types of both parts - text/plain and text/html.
 # part1 = MIMEText(text, 'plain')
 part2 = MIMEText(html, 'html')
-fp = open('happyBirthday.jpeg', 'rb')
+fp = open('hbd_2.jpg', 'rb')
 msgImage = MIMEImage(fp.read())
 fp.close()
 msg.attach(part2)
@@ -40,6 +40,6 @@ finalBody = msg.as_string()
 
 s = smtplib.SMTP('smtp.office365.com', 587)
 s.starttls()
-s.login('akshita.kukreja@cygrp.com','Twist@2020')
+s.login('akshita.kukreja@cygrp.com','December@2020')
 s.sendmail(msg['From'], [msg['To']], finalBody)
 s.quit()
